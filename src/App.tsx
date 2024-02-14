@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { Wrapper } from './components/Wrapper.styled'; 
+import img from './images.png';
+import { Text } from './components/Text.styled';
+import { Btn } from './components/Button.styled';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Wrapper>
+          <img src={img} alt='images nature'/>
+          <Wrapper wrapperType='conteinerMain'>
+              <Text textType={'title'}>Headline</Text>
+              <Text textType={'mainText'}>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</Text>
+              <Wrapper wrapperType={'conteinerBtn'}> 
+                  <Btn btnType={'primary'}>See more</Btn>
+                  <Btn btnType={'outlined'}>Save</Btn>
+              </Wrapper>
+          </Wrapper>
+      </Wrapper>
     </div>
   );
 }
